@@ -1371,7 +1371,7 @@ body {
 @media (max-width: 991px) {
   .home_row
   {
-    min-height: 100%;
+    min-height: 100% !important;
   }
   .theme_toggle_div {
     position: fixed;
