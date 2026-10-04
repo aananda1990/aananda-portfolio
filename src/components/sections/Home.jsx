@@ -9,7 +9,7 @@ export default function Home() {
 
         {/* Main Content */}
         <div className="container-fluid portfolio-container">
-          <div className="row align-items-center min-vh-100">
+          <div className="row align-items-center min-vh-100 home_row">
             {/* =========================
         LEFT IMAGE
     ========================== */}

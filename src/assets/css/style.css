@@ -1369,6 +1369,10 @@ body {
 
 /* Mobile */
 @media (max-width: 991px) {
+  .home_row
+  {
+    min-height: 100%;
+  }
   .theme_toggle_div {
     position: fixed;
     left: auto;
