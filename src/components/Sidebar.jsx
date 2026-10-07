@@ -47,6 +47,36 @@ const Sidebar = ({ activeSection, onSelect }) => {
          
         </ul>
       </div>
+
+      {/* mobile menu */}
+
+      <div className="header_mobile d-block d-lg-none">
+        <ul id="mobile-nav" class="ul_mobile_menu">
+          {NAV_ITEMS.map(({ id, label, icon: Icon }) => (
+            <li
+              key={id}
+              className={`icon-box desktop-nav-element ${
+                activeSection === id ? "active" : ""
+              }`}
+              onClick={() => onSelect(id)}
+              aria-label={label}
+              aria-current={activeSection === id ? "page" : undefined}
+              title={label}
+            >
+              <span className="menu_icon">
+                <Icon size={20} />
+              </span>
+
+              
+                <h4>{label}</h4>
+              
+            </li>
+          ))}
+         
+        </ul>
+      </div>
+
+
       {/* dark/light toggle button */}
       <div className="theme_toggle_div">
       <button

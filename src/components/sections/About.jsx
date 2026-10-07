@@ -1,4 +1,12 @@
 import { ArrowRight } from "lucide-react";
+import {
+  personalInfo,
+  services,
+  skills,
+  workExperience,
+  education,
+} from "../../data/aboutData";
+
 export default function About() {
   // const info = [
   //   ["First Name", "Your"],
@@ -9,16 +17,16 @@ export default function About() {
   //   ["Email", "you@mail.com"],
   // ];
 
-  const skills = [
-    { name: "HTML", percentage: 25 },
-    { name: "JAVASCRIPT", percentage: 89 },
-    { name: "CSS", percentage: 70 },
-    { name: "PHP", percentage: 66 },
-    { name: "WORDPRESS", percentage: 95 },
-    { name: "JQUERY", percentage: 50 },
-    { name: "ANGULAR", percentage: 65 },
-    { name: "REACT", percentage: 45 },
-  ];
+  // const skills = [
+  //   { name: "HTML", image:htmlSkill  },
+  //   { name: "JAVASCRIPT", image: javascriptSkill },
+  //   { name: "CSS", image: cssSkill },
+  //   { name: "PHP", image: phpSkill },
+  //   { name: "WORDPRESS", image: wordpressSkill },
+  //   { name: "JQUERY", image: jquerySkill },
+  //   { name: "ANGULAR", image: angularSkill },
+  //   { name: "REACT", image:  reactSkill},
+  // ];
 
   return (
     <>
@@ -42,7 +50,7 @@ export default function About() {
             </h1>
             <span />
           </div>
-          <div className="row g-5 align-items-center">
+          <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="personal-info">
                 <h2 className="sub_title text-start">Personal Info</h2>
@@ -57,9 +65,7 @@ export default function About() {
                     </div>
                     <div className="info-item">
                       <span className="info_lbl">Total Experience: </span>
-                      <strong className="info_details">
-                        8Year
-                      </strong>
+                      <strong className="info_details">8Year</strong>
                     </div>
                     <div className="info-item">
                       <span className="info_lbl">DOB</span>
@@ -120,7 +126,7 @@ export default function About() {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="row g-4">
+              <div className="row g-4-">
                 {/* CARD 1 */}
                 <div className="col-md-6 about_card_box">
                   <div className="about-card">
@@ -222,8 +228,9 @@ export default function About() {
         <div className="container">
           {/* Section Heading */}
           <div className="text-center">
-          <h2 className="sub_title">My <span className="color_highlight">SKILLS</span> </h2>
-
+            <h2 className="sub_title">
+              My <span className="color_highlight">SKILLS</span>{" "}
+            </h2>
           </div>
           {/* <div className="skills-heading text-center">
             <span />
@@ -233,22 +240,22 @@ export default function About() {
             <span />
           </div> */}
           {/* Skills Grid */}
-          <div className="row g-4">
+          <div className="row g-4-">
             {/* HTML */}
             {skills.map((skill, index) => {
               return (
                 <>
-                  <div className="col-12 col-sm-6 col-lg-3 skill_card_box">
+                  <div className="col-6 col-sm-6 col-lg-3 skill_card_box mb-3">
                     <div className="skill_card">
-                      <div className="skill_icon">iocn</div>
+                      <div className="skill_icon">
+                        <img src={skill.image} alt={skill.name} />
+                      </div>
                       <h3>{skill.name}</h3>
                     </div>
                   </div>
                 </>
               );
             })}
-
-            
           </div>
         </div>
       </section>
@@ -257,10 +264,8 @@ export default function About() {
         <div className="container">
           {/* Section Heading */}
 
-          <h2 className="section-title">
-          My Journey
-          </h2>
-          <div className="row g-5">
+          <h2 className="section-title">My Journey</h2>
+          <div className="row g-">
             {/* =========================
                  WORK EXPERIENCE
             ========================== */}
@@ -272,78 +277,30 @@ export default function About() {
                 <span>Work Experience</span>
               </div>
               <div className="timeline">
+                {workExperience.map((item) => {
+                  return (
+                    <>
+                      <div className="timeline-item">
+                        <span className="timeline-dot" />
+                        <div className="timeline_card">
+                          <div className="card-content">
+                            <div className="date">
+                              <i class="fa fa-calendar" aria-hidden="true"></i>
+                              {item.year}
+                            </div>
+                            <h3 className="job-title">
+                              {item.position}
+                              <span className="separator">—</span>
+                              <span className="company">{item.company}</span>
+                            </h3>
+                            <p className="description">{item.description}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  );
+                })}
                 {/* Experience 1 */}
-                <div className="timeline-item">
-                  <span className="timeline-dot" />
-                  <div className="timeline_card">
-                    {/* <div className="card-icon">
-                      <i className="bi bi-briefcase-fill" />
-                    </div> */}
-                    <div className="card-content">
-                      <div className="date">
-                      <i class="fa fa-calendar" aria-hidden="true"></i>
-                        2018 - Present
-                      </div>
-                      <h3 className="job-title">
-                        Web Developer
-                        <span className="separator">—</span>
-                        <span className="company">
-                          Envato
-                        </span>
-                      </h3>
-                      <p className="description">
-                        Developed and maintained responsive websites
-                        and web applications using modern technologies.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                {/* Experience 2 */}
-                <div className="timeline-item">
-                  <span className="timeline-dot" />
-                  <div className="timeline_card">
-                    <div className="card-content">
-                      <div className="date">
-                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                        2013 - 2018
-                      </div>
-                      <h3 className="job-title">
-                        UI/UX Designer
-                        <span className="separator">—</span>
-                        <span className="company">
-                          ThemeForest
-                        </span>
-                      </h3>
-                      <p className="description">
-                        Designed user-friendly interfaces and created
-                        modern, responsive web designs.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                {/* Experience 3 */}
-                <div className="timeline-item">
-                  <span className="timeline-dot" />
-                  <div className="timeline_card">
-                    <div className="card-content">
-                      <div className="date">
-                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                        2005 - 2013
-                      </div>
-                      <h3 className="job-title">
-                        Consultant
-                        <span className="separator">—</span>
-                        <span className="company">
-                          VideoHive
-                        </span>
-                      </h3>
-                      <p className="description">
-                        Provided web solutions and technical consultancy
-                        for different clients and projects.
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             {/* =========================
@@ -369,13 +326,11 @@ export default function About() {
                       <h3 className="job-title">
                         Engineering Degree
                         <span className="separator">—</span>
-                        <span className="company">
-                          Oxford University
-                        </span>
+                        <span className="company">Oxford University</span>
                       </h3>
                       <p className="description">
-                        Completed engineering studies with a focus
-                        on technical and analytical skills.
+                        Completed engineering studies with a focus on technical
+                        and analytical skills.
                       </p>
                     </div>
                   </div>
@@ -392,13 +347,11 @@ export default function About() {
                       <h3 className="job-title">
                         Master Degree
                         <span className="separator">—</span>
-                        <span className="company">
-                          Kiev University
-                        </span>
+                        <span className="company">Kiev University</span>
                       </h3>
                       <p className="description">
-                        Completed postgraduate studies and developed
-                        advanced professional knowledge.
+                        Completed postgraduate studies and developed advanced
+                        professional knowledge.
                       </p>
                     </div>
                   </div>
@@ -415,13 +368,11 @@ export default function About() {
                       <h3 className="job-title">
                         Bachelor Degree
                         <span className="separator">—</span>
-                        <span className="company">
-                          Tunis High School
-                        </span>
+                        <span className="company">Tunis High School</span>
                       </h3>
                       <p className="description">
-                        Completed foundational education and built
-                        strong academic skills.
+                        Completed foundational education and built strong
+                        academic skills.
                       </p>
                     </div>
                   </div>
