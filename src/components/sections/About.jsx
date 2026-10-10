@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+// import resumePdf from "../../assets/AanandaKumarDas_Resume.pdf";
 import {
   personalInfo,
   services,
@@ -114,14 +115,24 @@ export default function About() {
                 </div>
                 {/* DOWNLOAD CV */}
                 <div className="mt-3">
-                  <a href="#" className="download-btn- about-btn">
+                  {/* <a href="/AanandaKumarDas_Resume.pdf" download="Aananda-Kumar-Das-Resume.pdf" className="download-btn- about-btn">
                     <span>DOWNLOAD CV</span>
-                    {/* <i className="bi bi-download" /> */}
                     <span className="icon_circle">
                       {" "}
                       <ArrowRight />
                     </span>
-                  </a>
+                  </a> */}
+                  <a
+  href="/resume.pdf"
+  download="Aananda-Kumar-Das-Resume.pdf"
+  className="download-btn- about-btn"
+>
+  <span>DOWNLOAD CV</span>
+
+  <span className="icon_circle">
+    <ArrowRight />
+  </span>
+</a>
                 </div>
               </div>
             </div>
@@ -240,12 +251,15 @@ export default function About() {
             <span />
           </div> */}
           {/* Skills Grid */}
-          <div className="row g-4-">
+          <div className="row mobile-gutter">
             {/* HTML */}
             {skills.map((skill, index) => {
               return (
                 <>
-                  <div className="col-6 col-sm-6 col-lg-3 skill_card_box mb-3">
+                  <div
+                    className="col-4 col-sm-6 col-lg-3 skill_card_box mb-3"
+                    key={skill.id}
+                  >
                     <div className="skill_card">
                       <div className="skill_icon">
                         <img src={skill.image} alt={skill.name} />
@@ -263,18 +277,18 @@ export default function About() {
       <section className="bottom_section_padding experience-section-">
         <div className="container">
           {/* Section Heading */}
+          <h2 className="sub_title text-center">
+            My <span className="color_highlight">Journey</span>{" "}
+          </h2>
 
-          <h2 className="section-title">My Journey</h2>
           <div className="row g-">
             {/* =========================
                  WORK EXPERIENCE
             ========================== */}
             <div className="col-lg-6">
               <div className="timeline-heading">
-                <div className="heading-icon">
-                  <i className="bi bi-briefcase-fill" />
-                </div>
-                <span>Work Experience</span>
+                
+                <h4>Work Experience</h4>
               </div>
               <div className="timeline">
                 {workExperience.map((item) => {
@@ -308,56 +322,37 @@ export default function About() {
             ========================== */}
             <div className="col-lg-6">
               <div className="timeline-heading">
-                <div className="heading-icon">
-                  <i className="bi bi-mortarboard-fill" />
-                </div>
-                <span>Education</span>
+                <h4>Education</h4>
               </div>
               <div className="timeline">
-                {/* Education 1 */}
-                <div className="timeline-item">
-                  <span className="timeline-dot" />
-                  <div className="timeline_card">
-                    <div className="card-content">
-                      <div className="date">
-                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                        2015
+                {education.map((item) => {
+                  return (
+                    <>
+                      <div className="timeline-item">
+                        <span className="timeline-dot" />
+                        <div className="timeline_card">
+                          <div className="card-content">
+                            <div className="date">
+                              <i class="fa fa-calendar" aria-hidden="true"></i>
+                              {item.year}
+                            </div>
+                            <h3 className="job-title">
+                              {item.degree}
+                              <span className="separator">—</span>
+                              <span className="company">{item.institute}</span>
+                            </h3>
+                            <p className="description">
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                      <h3 className="job-title">
-                        Engineering Degree
-                        <span className="separator">—</span>
-                        <span className="company">Oxford University</span>
-                      </h3>
-                      <p className="description">
-                        Completed engineering studies with a focus on technical
-                        and analytical skills.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                {/* Education 2 */}
-                <div className="timeline-item">
-                  <span className="timeline-dot" />
-                  <div className="timeline_card">
-                    <div className="card-content">
-                      <div className="date">
-                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                        2012
-                      </div>
-                      <h3 className="job-title">
-                        Master Degree
-                        <span className="separator">—</span>
-                        <span className="company">Kiev University</span>
-                      </h3>
-                      <p className="description">
-                        Completed postgraduate studies and developed advanced
-                        professional knowledge.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                    </>
+                  );
+                })}
+
                 {/* Education 3 */}
-                <div className="timeline-item">
+                {/* <div className="timeline-item">
                   <span className="timeline-dot" />
                   <div className="timeline_card">
                     <div className="card-content">
@@ -376,7 +371,7 @@ export default function About() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

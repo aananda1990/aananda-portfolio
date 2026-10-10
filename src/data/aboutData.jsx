@@ -152,11 +152,11 @@ export const skills = [
 export const workExperience = [
   {
     id: 1,
-    year: "2018 - Present",
+    year: "2018",
     position: "Frontend Developer",
     company: "Omind Technologies",
     description:
-      "Developed and maintained responsive websites and web applications using modern frontend technologies.",
+      "Developed responsive web applications and reusable UI components using modern frontend technologies.",
   },
 
   {
@@ -165,7 +165,7 @@ export const workExperience = [
     position: "UI/UX Designer",
     company: "Elvira InfoTech ",
     description:
-      "Designed user-friendly interfaces and created modern, responsive web designs.",
+      "Designed intuitive user interfaces and responsive layouts to improve usability and user experience.",
   },
 
   {
@@ -174,7 +174,7 @@ export const workExperience = [
     position: "Front End Developer",
     company: "Winsome IT Solutions ",
     description:
-      "Provided web design solutions and frontend development support for different projects.",
+      "Built responsive web pages and implemented frontend designs using HTML, CSS, and JavaScript.",
   },
   {
     id: 4,
@@ -182,7 +182,7 @@ export const workExperience = [
     position: "HTML Developer",
     company: "MET Technologies",
     description:
-      "rent projects.",
+      "Developed and maintained HTML-based web pages with cross-browser compatibility and responsive layouts.",
   },
   {
     id: 5,
@@ -190,7 +190,7 @@ export const workExperience = [
     position: "HTML Developer",
     company: "Personalive Services",
     description:
-      "rent projects.",
+      "Created and maintained website layouts using HTML and CSS to deliver clean, user-friendly interfaces.",
   },
 ];
 
@@ -201,27 +201,35 @@ export const workExperience = [
 export const education = [
   {
     id: 1,
-    year: "2015",
-    degree: "Engineering Degree",
-    institute: "University Name",
+    year: "2014",
+    degree: "MCA",
+    institute: "MTU, Meerut",
     description:
       "Completed engineering studies with a focus on technical and analytical skills.",
   },
 
   {
     id: 2,
-    year: "2012",
-    degree: "Master Degree",
-    institute: "University Name",
+    year: "2011",
+    degree: "BCA",
+    institute: "SMU, GANGTOK ",
     description:
       "Completed postgraduate studies and developed advanced professional knowledge.",
   },
 
   {
     id: 3,
-    year: "2009",
-    degree: "Bachelor Degree",
-    institute: "School / College Name",
+    year: "2007",
+    degree: "Higher Secondary (12th)",
+    institute: "JAC, Ranchi | 54% ",
+    description:
+      "Completed foundational education and built strong academic skills.",
+  },
+  {
+    id: 4,
+    year: "2005",
+    degree: "Secondary (10th),",
+    institute: "JAC, Ranchi | 63% ",
     description:
       "Completed foundational education and built strong academic skills.",
   },

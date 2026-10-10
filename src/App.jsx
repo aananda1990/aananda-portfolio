@@ -25,7 +25,14 @@ export default function App() {
   return (
     <div className="app">
       <main className="content">
-        <ActiveComponent />
+      <div
+          key={activeSection}
+          className="page-transition"
+        >
+          <ActiveComponent onSelect={setActiveSection} />
+        </div>
+        
+        {/* <ActiveComponent onSelect={setActiveSection} /> */}
       </main>
 
       <Sidebar activeSection={activeSection} onSelect={setActiveSection} />

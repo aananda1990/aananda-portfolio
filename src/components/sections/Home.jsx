@@ -1,6 +1,6 @@
 // import { Home, User, Briefcase, Mail, MessageSquare  } from "lucide-react";
 import { ArrowRight } from "lucide-react";
-export default function Home() {
+export default function Home({onSelect }) {
   return (
     <section className="section portfolio-wrapper home_sec">
       
@@ -50,14 +50,10 @@ export default function Home() {
                 {/* Button */}
                 <button
                   className="about-btn"
-                  onClick={() => handleNavigation("about")}
+                  onClick={() => onSelect("about")}
                 >
                   <span>MORE ABOUT ME</span>
-                  {/* <i data-lucide="arrow-right"></i> */}
                   <span className="icon_circle"> <ArrowRight  /></span>
-                 
-
-                  {/* <i className="bi bi-arrow-right"></i> */}
                 </button>
               </div>
             </div>

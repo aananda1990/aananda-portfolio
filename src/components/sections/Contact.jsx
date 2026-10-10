@@ -1,183 +1,202 @@
 import React from "react";
-import {
-  User,
-  Mail,
-  Tag,
-  MessageSquare,
-  Send,
-  Phone,
+// import {
+//   Mail,
+//   Phone,
 
-} from "lucide-react";
-
-
-
+//   ArrowRight,
+//   MapPin,
+//   Download,
+// } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section className="section_padding contact-section-" id="contact">
+    <section className="section_padding contact-section">
       <div className="container">
-        {/* =========================
-            SECTION HEADER
-        ========================== */}
+
+        {/* Section Heading */}
         <div className="section-title text-center">
-            <span />
-            <h1>
-            GET IN <strong className="color_highlight">TOUCH</strong>
-            </h1>
-            <span />
-          </div>
+          <span></span>
 
-        {/* =========================
-            CONTACT CONTENT
-        ========================== */}
+          <h1>
+            CONTACT <strong className="color_highlight">ME</strong>
+          </h1>
 
-        <div className="row align-items-center g-5">
-          {/* =========================
-              LEFT SIDE
-          ========================== */}
+          <span></span>
+        </div>
 
-          <div className="col-lg-4">
-            <div className="contact-info">
-              <span className="contact-small-line"></span>
+        {/* Intro */}
+        <div className="contact-intro text-center">
 
-              <h3>
-                DON'T <span>BE SHY !</span>
-              </h3>
+          <p>
+            Have a project in mind or looking for a Frontend Developer?
+           
+            Feel free to get in touch with me.
+          </p>
+        </div>
 
-              <p className="contact-description">
-                Feel free to get in touch with me. I am always open to
-                discussing new projects, creative ideas or opportunities to be
-                part of your visions.
-              </p>
+        {/* Contact Cards */}
+        <div className="row g-4 justify-content-center">
 
-              {/* Email */}
+          {/* Email */}
+          <div className="col-md-6 col-lg-4">
+            <div className="contact-card">
 
-              <div className="contact-detail">
-                <div className="contact-detail-icon">
-                  <Mail size={24} />
-                </div>
-
-                <div>
-                  <span>MAIL ME</span>
-                  <strong>yourmail@gmail.com</strong>
-                </div>
+              <div className="contact-icon">
+                {/* <Mail size={28} /> */}
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
               </div>
 
-              {/* Phone */}
-
-              <div className="contact-detail">
-                <div className="contact-detail-icon">
-                  <Phone size={24} />
-                </div>
-
-                <div>
-                  <span>CALL ME</span>
-                  <strong>+91 98765 43210</strong>
-                </div>
-              </div>
-
-              {/* Social Links */}
-
-              <div className="social-divider"></div>
-
-              <div className="social-links">
-                <a href="#" aria-label="Facebook">
-                  fb icon
-                </a>
-
-                <a href="#" aria-label="Twitter">
-                  tw icon:
-                </a>
-
-                <a href="#" aria-label="YouTube">
-                  Yt icon:
-                </a>
-
-               
-
-                <a href="#" aria-label="LinkedIn">
-                  lnk icon
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* =========================
-              RIGHT SIDE FORM
-          ========================== */}
-
-          <div className="col-lg-8">
-            <div className="contact-form-card">
-              {/* Form Header */}
-
-              <div className="form-heading">
-                <div className="form-heading-icon">
-                  <Mail size={22} />
-                </div>
+              <div className="contact-card-content">
+                <span>EMAIL ME</span>
 
                 <h3>
-                  SEND ME A <span>MESSAGE</span>
+                aanandanigam6@gmail.com
                 </h3>
+
+                <a href="aanandanigam6@gmail.com">
+                  Send me an email
+                  {/* <ArrowRight size={17} /> */}
+                </a>
               </div>
 
-              {/* Form */}
-
-              <form>
-                {/* Name + Email */}
-
-                <div className="row g-3">
-                  <div className="col-md-6">
-                    <div className="input-group-custom">
-                      <User size={18} />
-
-                      <input type="text" placeholder="Your Name" />
-                    </div>
-                  </div>
-
-                  <div className="col-md-6">
-                    <div className="input-group-custom">
-                      <Mail size={18} />
-
-                      <input type="email" placeholder="Your Email" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Subject */}
-
-                <div className="mt-3">
-                  <div className="input-group-custom">
-                    <Tag size={18} />
-
-                    <input type="text" placeholder="Your Subject" />
-                  </div>
-                </div>
-
-                {/* Message */}
-
-                <div className="mt-3">
-                  <div className="textarea-group-custom">
-                    <MessageSquare size={18} />
-
-                    <textarea rows="6" placeholder="Your Message"></textarea>
-                  </div>
-                </div>
-
-                {/* Submit */}
-
-                <button type="submit" className="send-button">
-                  <span className="send-icon">
-                    <Send size={18} />
-                  </span>
-
-                  <span>SEND MESSAGE</span>
-
-                  <span className="send-arrow">→</span>
-                </button>
-              </form>
             </div>
           </div>
+
+          {/* Phone */}
+          <div className="col-md-6 col-lg-4">
+            <div className="contact-card">
+
+              <div className="contact-icon">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              </div>
+
+              <div className="contact-card-content">
+                <span>CALL ME</span>
+
+                <h3>
+                  +91 95550 46405
+                </h3>
+
+                <a href="tel:+919555046405">
+                  Call me right now.
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Location */}
+          <div className="col-md-6 col-lg-4">
+            <div className="contact-card">
+
+              <div className="contact-icon">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              </div>
+
+              <div className="contact-card-content">
+                <span>LOCATION</span>
+
+                <h3>
+                  Kolkata, West Bengal, India
+                </h3>
+
+                <p>
+                  Available for remote opportunities
+                </p>
+              </div>
+
+            </div>
+          </div>
+
         </div>
+
+        {/* Availability */}
+        <div className="availability-box">
+
+          <div className="availability-content">
+
+            <div className="availability-status">
+              <span className="status-dot"></span>
+              AVAILABLE FOR OPPORTUNITIES
+            </div>
+
+            <h2>
+              LOOKING FOR A
+              <strong> FRONTEND DEVELOPER?</strong>
+            </h2>
+
+            <p>
+              I specialize in creating responsive, modern and
+              user-friendly websites using React.js, Webflow,
+              HTML, CSS and JavaScript.
+            </p>
+
+            <div className="skill-tags">
+              <span>React.js</span>
+              <span>JavaScript</span>
+              <span>HTML/CSS</span>
+              <span>Bootstrap</span>
+              <span>TailwindCss</span>
+              <span>Figma</span>
+              <span>Photoshop</span>
+              <span>Webflow</span>
+              <span>Responsive Design</span>
+              <span>UI/UX</span>
+            </div>
+
+          </div>
+
+          {/* CV Button */}
+          <a
+            href="/resume.pdf"
+            download="Aananda-Kumar-Das-Resume.pdf"
+            className="contact-cv-btn"
+          >
+            {/* <i class="fa fa-download" aria-hidden="true"></i> */}
+
+            <span>DOWNLOAD CV</span>
+            <i class="fa fa-download" aria-hidden="true"></i>
+
+          </a>
+
+        </div>
+
+        {/* Social Links */}
+        <div className="contact-social">
+
+          <h3>LET'S CONNECT</h3>
+
+          <div className="social-links">
+
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+
+            <a
+              href="mailto:aanandanigam6@gmail.com"
+              aria-label="Email"
+            >
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </a>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
   );
